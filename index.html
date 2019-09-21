@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Home</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+</head>
+<body>
+    <div id ="root"></div>
+    <script type= "text/babel">
+    
+    class HelloWorld extends React.Component{
+      render(){
+          return <div>Hello World {this.props.name}  {this.props.uni}</div>
+      }
+
+    }
+    class Main extends React.Component{
+        render(){
+            return <div>
+            <div><HelloWorld name = "Tabinda" uni="fast"/></div>
+            <h1>Heading1</h1>
+            <h1>Heading2</h1>
+            <h1>Heading3</h1>
+            <h1>Heading4</h1>
+            </div>
+        }
+    }
+    let ele = document.getElementById('root');
+    ReactDOM.render(<Main/>,ele);
+    </script>
+</body>
+</html>
